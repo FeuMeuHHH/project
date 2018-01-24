@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @niv = @category.id.to_s
   end
 
   # GET /categories/new

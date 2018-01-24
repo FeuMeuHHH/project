@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @category.id %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @category.name %>
 </p>
@@ -10,6 +15,11 @@
   <strong>Parent:</strong>
   <%= @category.parent_id %>
   <% end %>
+</p>
+
+<p>
+  <strong>niveau:</strong>
+  <%= @niv.count %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

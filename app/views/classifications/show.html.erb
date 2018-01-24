@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @classification.category_id %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @classification.video_id %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @classification.value %>
+</p>
+
+<%= link_to 'Edit', edit_classification_path(@classification) %> |
+<%= link_to 'Back', classifications_path %>
