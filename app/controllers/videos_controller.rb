@@ -10,6 +10,7 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    @clas = Classification.where(video_id: @video.id)
   end
 
   # GET /videos/new
@@ -69,6 +70,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:title, :link, :description)
+      params.require(:video).permit(:title, :link, :description, :embed_link)
     end
 end

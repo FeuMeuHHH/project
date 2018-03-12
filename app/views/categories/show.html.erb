@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @category.id %>
+  <strong>Num:</strong>
+  <%= @category.num %>
 </p>
 
 <p>
@@ -19,8 +19,18 @@
 
 <p>
   <strong>niveau:</strong>
-  <%= @niv.count %>
+  <%= @niv %>
 </p>
+
+<p>
+  <strong>Enfants:</strong>
+    <% @category.children.each do |child| %> 
+      <tr>
+        <td><%= child.id %></td>
+      </tr>
+    <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

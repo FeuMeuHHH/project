@@ -10,7 +10,12 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @niv = @category.id.to_s
+    if @category.num != 0
+      num = @category.num.to_s
+      @niv = num.count
+    else
+      @niv = 0
+    end
   end
 
   # GET /categories/new
@@ -70,6 +75,7 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:id, :name, :parent_id)
+      params.require(:category).permit(:num, :name, :parent_id)
     end
+
 end
